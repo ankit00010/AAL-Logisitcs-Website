@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
-const colors = require("colors");
 const connectDB = require("./config/connectDB");
+const cookieParser = require('cookie-parser');
 
 
 
@@ -20,12 +20,14 @@ app.use(express.json());
 //middlewares
 app.use(cors());
 
+app.use(cookieParser());
+
 app.use(morgan("dev"));
 
 
 //routes
-
-app.use("/api/v1/users", require('./routes/userRoutes'));
+const userRoutes = require('./routes/userRoutes');
+app.use("/api/v1/users", userRoutes);
 console.log('here server')
 const PORT = 8080 || process.env.PORT;
 

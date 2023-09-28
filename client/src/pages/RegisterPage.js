@@ -5,13 +5,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import axios from "axios";
 import { message } from 'antd';
+
 const RegisterPage = () => {
 
 
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    salutation: '',
+    salutation: 'Mr',
     fname: '',
     lname: '',
     email: '',
@@ -41,6 +42,8 @@ const RegisterPage = () => {
       setLoading(false);
       navigate("/");
     } catch (error) {
+      console.log(formData);
+
       setLoading(false);
       message.error("something went wrong");
     }
