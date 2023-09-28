@@ -22,13 +22,11 @@ const loginController = async (req, res) => {
                 message: 'User not found',
             });
         }
-
         // Compare the provided password with the stored hashed password
         bcrypt.compare(password, user.password, (err, passwordMatch) => {
             if (passwordMatch) {
                 // Create a JWT with user data
-                const token = jwt.sign(
-                    { email: user.email, role: user.role },
+                const token = jwt.sign({ email: user.email, role: user.role },
                     "your-secret-key", // Replace with your secret key
                     { expiresIn: '1d' }
                 );
@@ -39,7 +37,7 @@ const loginController = async (req, res) => {
                 // Respond with a success message or user data
                 return res.status(200).json({
                     success: true,
-                    user,
+                    role: user.role,
                     message: 'Login successful',
                 });
             } else {

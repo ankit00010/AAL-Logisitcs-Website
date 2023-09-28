@@ -28,13 +28,21 @@ const LoginPage = ({ show, handleClose }) => {
         e.preventDefault();
         try {
             setLoading(true);
-            const { data } = await axios.post("/users/login", formData);
-            setLoading(false);
+            const response = await axios.post("/users/login", formData);
 
-            message.success("login success");
+            if (response.data.success) {
+                setLoading(false);
 
-            handleClose();
-            navigate("/");
+                message.success("login success");
+                if (response.data.role === 'admin') {
+                    navigate('/admin/dashboard');
+                }
+                else {
+
+                    navigate("/");
+                }
+                handleClose();
+            }
         } catch (error) {
             setLoading(false);
             if (error.response) {
@@ -54,6 +62,8 @@ const LoginPage = ({ show, handleClose }) => {
             }
         }
     };
+
+
 
     return (
         <>
