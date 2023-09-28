@@ -22,6 +22,7 @@ const LoginPage = ({ show, handleClose }) => {
 
         setFormData({ ...formData, [name]: value });
     }
+    axios.defaults.withCredentials = true;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,12 +30,28 @@ const LoginPage = ({ show, handleClose }) => {
             setLoading(true);
             const { data } = await axios.post("/users/login", formData);
             setLoading(false);
+
             message.success("login success");
+
             handleClose();
             navigate("/");
         } catch (error) {
             setLoading(false);
-            message.error("something went wrong");
+            if (error.response) {
+                // Check the status code to determine the type of error
+                if (error.response.status === 401) {
+                    // Unauthorized (incorrect username or password)
+                    message.error("Incorrect username or password");
+                }
+
+                else {
+                    // Handle other errors as needed
+                    message.error("Something went wrong");
+                }
+            } else {
+                // Network error or other unexpected errors
+                message.error("Network error or something unexpected happened");
+            }
         }
     };
 
