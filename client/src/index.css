@@ -1,0 +1,56 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+/* Header.css */
+
+/* Custom background color for the navbar */
+.navbar-nav .nav-link,
+.custom-navbar .navbar-brand {
+  color: #fff !important;
+
+
+}
+
+.custom-navbar {
+  background-color: #262692;
+}
+
+
+.custom-login-link {
+  background-color: #CF6301;
+  color: #FFFFFF;
+  padding: 5px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.custom-login-link:hover {
+  background-color: #FF8500;
+  color: #FFFFFF;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+/* Layout.css */
+.content-layout {
+  height: 80vh;
+}
+
+
+
+
+/* Register-Page*/
+
+
+.register-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}

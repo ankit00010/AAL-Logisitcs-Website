@@ -1,0 +1,45 @@
+.gradient-custom {
+    /* Primary Color (Background or Header) */
+    background: #262692;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    /* Text Color on Primary Background */
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+/* Secondary Color (Accent or Buttons) */
+.btn-primary {
+    background-color: #CF6301;
+    border-color: #CF6301;
+}
+
+/* Text Color on Secondary Background */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    color: #FFFFFF;
+}
+
+/* Hover or Active State for Buttons */
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #FF8500;
+    border-color: #FF8500;
+}
+
+/* Specify the font size and line height for labels */
+label.form-label {
+    font-size: 1rem;
+    line-height: 2.15;
+}

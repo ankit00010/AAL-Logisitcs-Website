@@ -1,0 +1,25 @@
+/* Custom CSS for the login modal */
+.login-modal {
+    background-color: #262692;
+    /* Primary Color (Background or Header) */
+    color: #FFFFFF;
+    /* Text Color on Primary Background */
+
+    /* Add more styles as needed */
+}
+
+.login-modal .modal-header {
+    background-color: #CF6301;
+    /* Secondary Color (Accent or Buttons) */
+    color: #FFFFFF;
+    /* Text Color on Secondary Background */
+
+    /* Add more styles as needed */
+}
+
+.login-modal .forgot-password-link {
+    color: #FF8500;
+    /* Hover or Active State for Buttons */
+}
+
+/* Add more custom styles for the modal elements as needed */

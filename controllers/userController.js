@@ -1,43 +1,44 @@
-const userModel=require('../models/userModel');
+const userModel = require('../models/userModel');
 
-const loginController=async(req,res)=>{
+const loginController = async (req, res) => {
     try {
-        const {email,password}=req.body
-        const user=await userModel.findOne({email,password});
-        if(!user){
+        const { email, password } = req.body
+        const user = await userModel.findOne({ email, password });
+        if (!user) {
             return res.status(404).send('User not found');
 
         }
         res.status(200).json({
-            success:true,
+            success: true,
             user
         });
     } catch (error) {
         res.status(400).json({
-            success:false,
+            success: false,
             error
         })
     }
-}
+};
 
 //Register call back
 
-const registerController=async(req,res)=>{
+const registerController = async (req, res) => {
     try {
-        
-        const newUser=new userModel(req.body);
-         await newUser.save();
+        console.log('Received registration request:', req.body);
 
-         res.status(200).json({
-            success:true,
+        const newUser = new userModel(req.body);
+        await newUser.save();
+
+        res.status(200).json({
+            success: true,
             newUser
-         })
+        })
     } catch (error) {
         res.status(400).json({
-            success:false,
+            success: false,
             error
         })
     }
-}
+};
 
-module.exports={loginController,registerController};
+module.exports = { loginController, registerController };

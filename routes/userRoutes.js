@@ -1,20 +1,21 @@
-const express=require("express");
-const { loginController, registerController } = require("../server/controllers/userController");
+const express = require("express");
+const { loginController, registerController } = require("../controllers/userController");
 
 //router object
-const require=express.Router();
+const router = express.Router();
 
 //POST || LOGIN
-router.post('/login',loginController)
+router.post('/login', loginController)
 
 
 //POST || REGISTER USER
 
-router.post('/register',registerController);
+router.post('/register', registerController);
+console.log('here on /regiser')
 
 
 
 
 
 
-module.exports=router;
+module.exports = router;
