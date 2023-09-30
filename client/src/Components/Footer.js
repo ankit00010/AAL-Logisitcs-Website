@@ -1,10 +1,12 @@
-import React from "react";
+// Footer.js
+import React from 'react';
+import '../index.css'
 
 const Footer = () => {
   return (
-    <div className="bg-dark text-light text-center mt-5 p-4">
-      <h6 className="">Aryan-Ankit Logistics</h6>
-      <p className="">© 2023 Aryan-Ankit Logistics. All Rights Reserved.</p>
+    <div className="footer ">
+      <h6>Aryan-Ankit Logistics</h6>
+      <p>© 2023 Aryan-Ankit Logistics. All Rights Reserved.</p>
     </div>
   );
 };

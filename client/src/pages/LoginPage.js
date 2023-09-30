@@ -7,7 +7,9 @@ import { message } from 'antd';
 
 
 
-const LoginPage = ({ show, handleClose }) => {
+const LoginPage = (props) => {
+    const show = props.show;
+    const handleClose = props.handleClose;
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 

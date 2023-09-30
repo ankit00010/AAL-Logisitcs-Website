@@ -27,7 +27,7 @@ const loginController = async (req, res) => {
             if (passwordMatch) {
                 // Create a JWT with user data
                 const token = jwt.sign({ email: user.email, role: user.role },
-                    "your-secret-key", // Replace with your secret key
+                    "your-secret-key", // Replace 
                     { expiresIn: '1d' }
                 );
 
@@ -38,6 +38,7 @@ const loginController = async (req, res) => {
                 return res.status(200).json({
                     success: true,
                     role: user.role,
+                    uname: user.fname,
                     message: 'Login successful',
                 });
             } else {
