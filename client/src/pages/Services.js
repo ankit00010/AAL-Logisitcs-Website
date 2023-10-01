@@ -19,7 +19,7 @@ const Services = () => {
         <Layout>
             <div className=' container-style'>
                 <div style={bgImageStlye}>
-                    <div className='transparent-backgorund'></div>
+                    <div className='transparent-backgorunds'></div>
                     <div className="des">
                         <div>
                             <h1>
