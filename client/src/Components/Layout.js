@@ -20,8 +20,9 @@ const Layout = ({ children }) => {
       <div className='content-layout'>
         {children}
       </div>
-      <Footer />
       <LoginModal show={showLoginModal} handleClose={handleLoginModalClose} />
+
+      <Footer />
 
     </>
   );

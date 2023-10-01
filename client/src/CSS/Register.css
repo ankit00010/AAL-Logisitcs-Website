@@ -1,6 +1,6 @@
 .gradient-custom {
     /* Primary Color (Background or Header) */
-    background: #262692;
+    background: rgb(8, 70, 123);
 }
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
