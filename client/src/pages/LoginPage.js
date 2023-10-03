@@ -1,15 +1,12 @@
-import { Modal, Form, Button, Col, Row, Spinner } from 'react-bootstrap';
-import '../CSS/Login.css';
+import React, { useState } from 'react';
+import { Form, Button, Spinner } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import axios from 'axios';
 import { message } from 'antd';
+import '../CSS/Register.css'; // Use the same CSS file as the register page
+import '../pages/Commonback.css';
 
-
-
-const LoginPage = (props) => {
-    const show = props.show;
-    const handleClose = props.handleClose;
+const LoginPage = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
@@ -23,7 +20,8 @@ const LoginPage = (props) => {
         const value = e.target.value;
 
         setFormData({ ...formData, [name]: value });
-    }
+    };
+
     axios.defaults.withCredentials = true;
 
     const handleSubmit = async (e) => {
@@ -34,98 +32,88 @@ const LoginPage = (props) => {
 
             if (response.data.success) {
                 setLoading(false);
+                message.success("Login success");
 
-                message.success("login success");
                 if (response.data.role === 'admin') {
                     navigate('/admin/dashboard');
-                }
-                else {
-
+                } else {
                     navigate("/");
                 }
-                handleClose();
             }
         } catch (error) {
             setLoading(false);
             if (error.response) {
-                // Check the status code to determine the type of error
                 if (error.response.status === 401) {
-                    // Unauthorized (incorrect username or password)
                     message.error("Incorrect username or password");
-                }
-
-                else {
-                    // Handle other errors as needed
+                } else {
                     message.error("Something went wrong");
                 }
             } else {
-                // Network error or other unexpected errors
                 message.error("Network error or something unexpected happened");
             }
         }
     };
 
-
+    const bgImageStyle = {
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundColor: "#333",
+        height: '100%',
+    };
 
     return (
-        <>
-            <Modal show={show} onHide={handleClose} centered>
-                <Modal.Header closeButton>
-                    <Modal.Title>Login</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    {loading && <Spinner />}
-                    <Form method='POST' onSubmit={handleSubmit}>
-                        <Row>
-                            <Col sm={12} className="mb-4">
-                                <Form.Group>
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control
-                                        type="email"
-                                        size="lg"
-                                        name='email'
-                                        value={formData.email}
-                                        onChange={handleInputState}
-                                    />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col sm={12} className="mb-4">
-                                <Form.Group>
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control
-                                        type="password"
-                                        size="lg"
-                                        name='password'
-                                        value={formData.password}
-                                        onChange={handleInputState}
-                                    />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-
-                        <div className="mt-2">
-                            <Link to="/reset-password" className="forgot-password-link">
-                                Forgot Password?
-                            </Link>
+        <section className="vh-100 gradient-custom">
+            <div className='register-backgorunds'></div>
+            <div style={bgImageStyle}>
+                <div className="container py-5 h-100">
+                    <div className="row justify-content-center align-items-center h-100">
+                        <div className="col-12 col-lg-9 col-xl-7">
+                            <div className="card shadow-2-strong card-registration" style={{ borderRadius: '15px' }}>
+                                <div className="card-body p-4 p-md-5">
+                                    <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">Login</h3>
+                                    {loading && <Spinner />}
+                                    <Form method="POST" onSubmit={handleSubmit}>
+                                        <Form.Group className="mb-4">
+                                            <Form.Label>Email</Form.Label>
+                                            <Form.Control
+                                                type="email"
+                                                size="lg"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleInputState}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group className="mb-4">
+                                            <Form.Label>Password</Form.Label>
+                                            <Form.Control
+                                                type="password"
+                                                size="lg"
+                                                name="password"
+                                                value={formData.password}
+                                                onChange={handleInputState}
+                                            />
+                                        </Form.Group>
+                                        <div className="mt-2">
+                                            <Link to="/reset-password" className="forgot-password-link">
+                                                Forgot Password?
+                                            </Link>
+                                        </div>
+                                        <div className="mt-4 pt-2 d-flex justify-content-between align-items-center">
+                                            <Button className="btn btn-primary btn-lg" type="submit">
+                                                Sign In
+                                            </Button>
+                                            <div>
+                                                Not a member? <Link to="/register">Sign Up</Link>
+                                            </div>
+                                        </div>
+                                    </Form>
+                                </div>
+                            </div>
                         </div>
-
-                        <div className="mt-3">
-                            Not a member? <Link to="/register">Sign Up</Link>
-                        </div>
-                    </Form>
-                </Modal.Body>
-
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose} className="login-modal">
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleSubmit}>Login</Button>
-                </Modal.Footer>
-            </Modal>
-        </>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 };
 

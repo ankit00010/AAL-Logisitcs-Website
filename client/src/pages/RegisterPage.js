@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import '../CSS/Register.css'
 import { Form, Button, Col, Row, Spinner } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import LoginPage from './LoginPage';
 import axios from "axios";
 import { message } from 'antd';
-import Layout from '../Components/Layout';
 
 const RegisterPage = () => {
 
@@ -50,11 +48,17 @@ const RegisterPage = () => {
     }
   };
 
-
+  const bgImageStyle = {
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundColor: "#333",
+    height: '100vh',
+  };
 
   return (
-    <Layout>
-      <section className="vh-100 gradient-custom">
+    <section className="vh-100 gradient-custom">
+      <div className='register-backgorunds'></div>
+      <div style={bgImageStyle}>
         <div className="container py-5 h-100">
           <div className="row justify-content-center align-items-center h-100">
             <div className="col-12 col-lg-9 col-xl-7">
@@ -139,9 +143,13 @@ const RegisterPage = () => {
                     </Row>
 
                     <div className="mt-4 pt-2 d-flex justify-content-between align-items-center">
+
+
                       <Button className="btn btn-primary btn-lg" type="submit">Sign Up</Button>
+
+
                       <div>
-                        Already a member? <Link to="/">Sign In</Link>
+                        Already a member? <Link to="/login">Sign In</Link>
 
                       </div>
                     </div>
@@ -155,8 +163,8 @@ const RegisterPage = () => {
             </div>
           </div>
         </div>
-      </section>
-    </Layout>
+      </div>
+    </section>
   );
 };
 

@@ -20,11 +20,7 @@ const imageSlide = [
         title: 'Book Now',
         body: 'Book your logistics order with us today for seamless transportation.'
     },
-    {
-        url: 'pic-5.jpg',
-        title: 'Book Now',
-        body: 'Book your logistics order with us today for seamless transportation.'
-    },
+
 
 ];
 export default imageSlide; // Export the imageSlide array

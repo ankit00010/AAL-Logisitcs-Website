@@ -5,7 +5,7 @@ const Background = () => {
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState == 4) {
+      if (currentState == 3) {
         setCurrentState(0);
       }
       else {
@@ -21,7 +21,7 @@ const Background = () => {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundColor: "#333",
-    height: '100%'
+    height: '75vh'
 
   };
 

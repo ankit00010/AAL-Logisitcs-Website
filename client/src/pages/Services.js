@@ -16,25 +16,23 @@ const Services = () => {
 
     };
     return (
-        <Layout>
-            <div className=' container-style'>
-                <div style={bgImageStlye}>
-                    <div className='transparent-backgorunds'></div>
-                    <div className="des">
-                        <div>
-                            <h1>
-                                Our Services
-                            </h1>
-                            <p>
-                                Explore Our Comprehensive Range of Logistics Services
-                            </p>
-                        </div>
-
+        <div className=' container-style'>
+            <div style={bgImageStlye}>
+                <div className='transparent-backgorunds'></div>
+                <div className="des">
+                    <div>
+                        <h1>
+                            Our Services
+                        </h1>
+                        <p>
+                            Explore Our Comprehensive Range of Logistics Services
+                        </p>
                     </div>
 
                 </div>
+
             </div>
-        </Layout>
+        </div>
     )
 }
 

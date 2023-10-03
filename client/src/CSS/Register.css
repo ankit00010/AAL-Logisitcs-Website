@@ -1,5 +1,7 @@
+/* Register.css */
+
+/* Primary Color (Background or Header) */
 .gradient-custom {
-    /* Primary Color (Background or Header) */
     background: rgb(8, 70, 123);
 }
 
@@ -42,4 +44,16 @@
 label.form-label {
     font-size: 1rem;
     line-height: 2.15;
+}
+
+.register-backgorunds {
+
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    z-index: 999;
+    top: 20;
+    left: 20;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(8, 70, 123));
+
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../Components/Layout'
 
 import '../pages/Commonback.css';
 
@@ -16,25 +15,24 @@ const ContactUs = () => {
 
     };
     return (
-        <Layout>
-            <div className=' container-style'>
-                <div style={bgImageStlye}>
-                    <div className='transparent-backgorunds'></div>
-                    <div className="des">
-                        <div>
-                            <h1>
-                                Contact Us
-                            </h1>
-                            <p>
-                                Get in Touch with Us for Any Inquiries or Assistance
-                            </p>
-                        </div>
-
+        <div className=' container-style'>
+            <div style={bgImageStlye}>
+                <div className='transparent-backgorunds'></div>
+                <div className="des">
+                    <div>
+                        <h1>
+                            Contact Us
+                        </h1>
+                        <p>
+                            Get in Touch with Us for Any Inquiries or Assistance
+                        </p>
                     </div>
 
                 </div>
+
             </div>
-        </Layout>
+        </div>
+
     )
 }
 

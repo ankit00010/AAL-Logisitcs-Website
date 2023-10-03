@@ -4,7 +4,7 @@ import '../index.css'
 
 const Footer = () => {
   return (
-    <div className="footer ">
+    <div className='footer'>
       <h6>Aryan-Ankit Logistics</h6>
       <p>© 2023 Aryan-Ankit Logistics. All Rights Reserved.</p>
     </div>
