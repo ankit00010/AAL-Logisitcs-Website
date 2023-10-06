@@ -1,37 +1,19 @@
-import React from 'react'
-
-import '../pages/Commonback.css';
-
-
+import React from 'react';
+import '../CSS/Commonback.css';
+import Landing_about from '../Components/About/Landing_about';
 const AboutUs = () => {
-    const bgImageStlye = {
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundColor: "#333",
-        height: '100%'
-
-    };
     return (
-
-        <div className=' container-style'>
-            <div style={bgImageStlye}>
-                <div className='transparent-backgorunds'></div>
-                <div className="des">
-                    <div>
-                        <h1>
-                            About Us
-                        </h1>
-                        <p>
-                            Discover Our Company's Story and Values
-                        </p>
-                    </div>
-
+        <div className="about-us-container">
+            <div className="transparent-backgrounds"></div>
+            <div className="about-us-background">
+                <div className="about-us-content">
+                    <h1>About Us</h1>
+                    <Landing_about />
                 </div>
 
             </div>
         </div>
-
-    )
+    );
 }
 
-export default AboutUs
+export default AboutUs;

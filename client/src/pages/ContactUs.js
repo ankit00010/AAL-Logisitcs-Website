@@ -1,39 +1,47 @@
-import React from 'react'
-
-import '../pages/Commonback.css';
-
-
-
+import React from 'react';
+import '../CSS/Commonback.css';
+import { FaEnvelope, FaPhone, FaMapMarker, FaClock, FaComments } from 'react-icons/fa';
 
 const ContactUs = () => {
-    const bgImageStlye = {
-        // backgroundImage: `url(${pic1.jpg}? :'')`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundColor: "#333",
-        height: '100%'
-
-    };
     return (
-        <div className=' container-style'>
-            <div style={bgImageStlye}>
-                <div className='transparent-backgorunds'></div>
-                <div className="des">
-                    <div>
-                        <h1>
-                            Contact Us
-                        </h1>
-                        <p>
-                            Get in Touch with Us for Any Inquiries or Assistance
-                        </p>
-                    </div>
-
+        <div className="about-us-container">
+            <div className="transparent-backgrounds"></div>
+            <div className="about-us-background">
+                <div className="about-us-content text-center">
+                    <h1>Contact Us</h1>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <section className="contact-section">
+                        <div className="container">
+                            <div className="row justify-content-center align-items-center">
+                                <div className="col-md-6">
+                                    <div className="contact-info">
+                                        <h2>Contact Information</h2>
+                                        <ul className="list-unstyled">
+                                            <li><FaEnvelope /> Email: aryanankitlogisticsllp9480@gmail.com</li>
+                                            <li><FaPhone /> Phone: +91 9711999362</li>
+                                            <li><FaMapMarker /> Address:  Ambernath</li>
+                                            <li><FaClock /> Business Hours: Monday-Saturday: 9:00 AM - 6:00 PM</li>
+                                            <li><FaComments /> Response Time: We typically respond to inquiries within 24 hours.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="contact-info text-center">
+                                        <h3>If you have any questions or need assistance, feel free to get in touch with us.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-
             </div>
         </div>
-
-    )
+    );
 }
 
 export default ContactUs;

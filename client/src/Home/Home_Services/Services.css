@@ -1,0 +1,42 @@
+/* Styles for the Services component */
+.services-section {
+    background-color: #F8F8F8;
+    /* Background color for the entire section */
+    padding: 50px;
+    border-radius: 10px;
+    color: black;
+    margin-top: 40px;
+}
+
+.services-section .card {
+    border: none;
+}
+
+.services-section .card-body {
+    text-align: center;
+    padding: 20px 40px;
+}
+
+.services-section img {
+    margin-bottom: 20px;
+}
+
+.services-section h4 {
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    margin-bottom: 20px;
+}
+
+.services-section .btn {
+    font-weight: bold;
+}
+
+/* Media query for small screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .services-section {
+        margin-top: 20px;
+        padding: 20px;
+    }
+}

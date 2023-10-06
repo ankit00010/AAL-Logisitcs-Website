@@ -1,0 +1,50 @@
+/* Styles for the About section */
+.about-box {
+    background-color: #F8F8F8;
+    /* Background color for the entire section */
+    padding: 50px;
+    border-radius: 10px;
+    color: black;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-box h3 {
+    color: #CF6301;
+}
+
+.about-img {
+    max-width: 100%;
+    max-height: auto;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    margin: 20px 0;
+}
+
+/* Media query for large screens */
+@media (min-width: 769px) {
+    .about-img {
+        margin-left: -20vh;
+        /* Offset the image to the left for large screens */
+        max-width: 600px;
+        max-height: -150px;
+    }
+}
+
+/* Media query for small screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .about-box {
+        margin-top: 30vh;
+        padding: 20px;
+    }
+
+    .about-img {
+        margin-left: 0;
+        /* Center the image on small screens */
+    }
+}

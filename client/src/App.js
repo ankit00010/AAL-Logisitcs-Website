@@ -26,12 +26,12 @@ function App() {
 
           },
           {
-            path: '/login',
+            path: 'login',
             element: <LoginPage />
 
           },
           {
-            path: 'about',
+            path: 'aboutus',
             element: <AboutUs />
 
 

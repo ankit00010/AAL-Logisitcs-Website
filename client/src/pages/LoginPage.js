@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { message } from 'antd';
 import '../CSS/Register.css'; // Use the same CSS file as the register page
-import '../pages/Commonback.css';
+import '../CSS/Commonback.css';
 
 const LoginPage = () => {
     const navigate = useNavigate();

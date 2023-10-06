@@ -1,0 +1,34 @@
+/* AboutUs.css */
+
+/* Style for the entire "About Us" section */
+.about-us-background {
+    background-color: #333;
+    /* Background color */
+    color: white;
+    /* Text color */
+    text-align: center;
+    /* Center-align text */
+    padding: 20px 0;
+    /* Adjust padding as needed */
+}
+
+.transparent-backgrounds {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    z-index: 999;
+    top: 50;
+    left: 50;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(8, 70, 123));
+}
+
+/* Style for the content within the "About Us" section */
+.about-us-content {
+    margin: 0 auto;
+    /* Center the content horizontally */
+    max-width: 1200px;
+    /* Set a maximum width for the content */
+    padding: 20px;
+    /* Add padding to the content */
+    position: relative;
+}

@@ -1,0 +1,18 @@
+.features-container {
+    padding: 20px;
+    background-color: #F8F8F8;
+
+}
+
+.feature-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 0 10px;
+    /* Combined margin for left and right */
+}
+
+.small-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}

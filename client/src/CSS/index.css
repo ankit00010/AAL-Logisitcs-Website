@@ -1,36 +1,12 @@
 /* Header.css */
 
-/* Custom background color for the navbar */
-.navbar-nav .nav-link,
-.custom-navbar .navbar-brand {
-  color: #fff !important;
 
+/* Top Navbar css here */
 
-}
+/* styles.css */
 
-/* To make the navlinks more highlighted */
-.active {
-  background-color: #CF6301;
-  color: #fff;
-  border-radius: 2rem;
-  display: inline-block;
-  transition: background-color 0.8s, color 0.8s;
-  font-weight: bold;
-  text-decoration: none;
+/* Navbar styles */
 
-
-}
-
-.custom-navbar {
-  background-color: rgb(8, 70, 123);
-  width: 100%;
-}
-
-/* Add margin between navigation items */
-.custom-nav .nav-link {
-  margin-right: 30px;
-  /* Adjust the margin as needed */
-}
 
 
 .custom-login-link {
@@ -48,6 +24,8 @@
   color: #FFFFFF;
   transition: background-color 0.3s, color 0.3s;
 }
+
+
 
 
 
@@ -102,4 +80,19 @@
   /* Set the height of your footer here */
 
   /* Add this to ensure a minimum height for the content area */
+}
+
+
+
+
+
+/* Home page css for about section */
+.home-page-container {
+  margin-top: 30vh;
+}
+
+
+
+* h3 {
+  color: #CF6301;
 }

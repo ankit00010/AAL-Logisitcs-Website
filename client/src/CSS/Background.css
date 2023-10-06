@@ -1,32 +1,32 @@
+/* Background.css */
 .container-style {
     height: 100vh;
     color: #333 !important;
     text-align: center;
     position: relative;
-    /* Add this to make sure children are positioned relative to this container */
 }
 
 .description {
-    width: 600px;
+    width: 90%;
+    /* Adjust width for smaller screens */
+    max-width: 600px;
+    /* Set a maximum width */
     position: absolute;
     z-index: 999;
     color: aliceblue;
     top: 50%;
-    /* Adjust to center vertically */
     left: 50%;
-    /* Adjust to center horizontally */
     transform: translate(-50%, -50%);
 }
 
 .description h1 {
-    font-size: 100px;
-    margin: 0;
-    /* Remove default margin */
+    font-size: 60px;
+    /* Reduce font size for smaller screens */
 }
 
 .description p {
-    font-size: 22px;
-    font-style: normal;
+    font-size: 18px;
+    /* Reduce font size for smaller screens */
 }
 
 .carousel-boult {
@@ -34,14 +34,13 @@
     align-items: flex-end;
     justify-content: center;
     position: absolute;
-    bottom: -20px;
-    /* Adjust as needed */
+    margin-top: 10vh;
     left: 0;
     right: 0;
 }
 
 .carousel-boult span {
-    width: 54px;
+    width: 80px;
     height: 15px;
     background-color: rgb(188, 127, 5);
     margin: 0 5px;
@@ -50,14 +49,18 @@
     box-shadow: 3px 1px 2px;
 }
 
-.transparent-backgorund {
 
+
+.transparent-background {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 999;
-    top: 30;
-    left: 10;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(8, 70, 123));
+}
 
+.slide-transition {
+    transition: background-image 0.5s ease-in-out;
 }

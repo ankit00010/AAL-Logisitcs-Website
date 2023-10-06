@@ -1,0 +1,42 @@
+.steps {
+    width: 80%;
+    margin: 3rem auto;
+    margin-block: 8rem;
+    background-color: #F8F8F8;
+}
+
+.steps_box {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+    background-color: #F8F8F8;
+    /* Added background color */
+}
+
+.steps_box_item_step {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem !important;
+}
+
+.steps_box_item_step span {
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+    background-color: #333;
+    color: white;
+    /* Add margin-top to create spacing */
+}
+
+@media screen and (max-width: 35em) {
+    .steps {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    .steps_box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

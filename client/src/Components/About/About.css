@@ -1,0 +1,29 @@
+/* Add your custom CSS styles for tabs and content here */
+
+/* Example styles for the active tab */
+.single-tab.active-tab {
+    background-color: #CF6301;
+    color: white;
+}
+
+/* Example styles for tab titles */
+.single-tab h2 {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Example styles for content */
+.tab-content .content {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Adjust other styles as needed based on your design requirements */
+@media (max-width: 768px) {
+    .home-page-container {
+        margin-top: 20%;
+        padding: -20vh;
+    }
+}

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Header from './Header';
+import React, { useEffect } from 'react';
+import Header from '../Components/Header/Header';
 import Footer from './Footer';
-import '../index.css';
+import '../CSS/index.css'
 
 import { Outlet } from 'react-router-dom';
 

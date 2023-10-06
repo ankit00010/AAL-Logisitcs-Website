@@ -1,0 +1,90 @@
+/* Base styles for the navbar */
+/* Base styles for the navbar */
+.top-navbar {
+    background-color: #333 !important;
+    color: white;
+    display: flex;
+    font-weight: bold;
+}
+
+/* Styles for each image and text pair */
+.top-navbar .d-flex {
+    align-items: center;
+    margin-right: 20px;
+    /* Adjust the margin as needed */
+}
+
+.top-navbar .icon {
+    max-width: 24px;
+    /* Adjust the maximum width for your icons */
+    margin-right: 10px;
+    /* Adjust the margin between the image and text */
+}
+
+/* Media query for small screens (e.g., mobile) */
+@media (max-width: 768px) {
+
+    /* Hide all pairs except for the contact pair */
+    .top-navbar .d-flex:not(:last-child) {
+        display: none;
+    }
+}
+
+
+
+.navbar-nav .nav-link,
+.custom-navbar .navbar-brand {
+    color: #fff !important;
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    background-color: #CF6301;
+    /* Bright color on hover */
+    color: #fff;
+    border-radius: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+/* Custom background color for the navbar */
+.custom-navbar {
+    background-color: rgb(8, 70, 123);
+    width: 100%;
+}
+
+/* Add margin between navigation items */
+.custom-navbar .nav-link {
+    margin-right: 30px;
+    /* Adjust the margin as needed */
+}
+
+/* Mobile-friendly styles using media queries */
+@media (max-width: 768px) {
+    .custom-navbar .navbar-toggler-icon {
+        color: #fff;
+        /* Set color for the mobile menu icon */
+    }
+
+    .custom-navbar .navbar-collapse {
+        background-color: rgb(8, 70, 123);
+        /* Background color for the mobile menu */
+    }
+
+    .custom-navbar .navbar-nav {
+        flex-direction: column;
+        /* Display links vertically on mobile */
+    }
+
+    .custom-navbar .nav-link {
+        margin-right: 0;
+        /* Remove margin between mobile links */
+        margin-bottom: 10px;
+        /* Add space between mobile links */
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: transparent;
+        /* Remove hover effect background color on mobile */
+    }
+}

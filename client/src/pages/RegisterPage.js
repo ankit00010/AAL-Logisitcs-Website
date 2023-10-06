@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../CSS/Register.css'
 import { Form, Button, Col, Row, Spinner } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
