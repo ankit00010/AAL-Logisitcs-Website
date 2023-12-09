@@ -1,5 +1,4 @@
 import React from 'react';
-import './Services.css';
 
 const ServiceCard = ({ icon, title, content }) => {
     return (
@@ -44,7 +43,7 @@ const servicesData = [
     },
 ];
 
-const Servicessss = () => {
+const ServiceLanding = () => {
     return (
         <section className="services-section">
             <div className="container overflow-hidden">
@@ -63,4 +62,4 @@ const Servicessss = () => {
     );
 };
 
-export default Servicessss;
+export default ServiceLanding;

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../CSS/Commonback.css';
-import Landing_about from '../Components/About/Landing_about';
+import LandingAbout from '../Components/About/LandingAbout';
 const AboutUs = () => {
     return (
         <div className="about-us-container">
@@ -8,7 +8,7 @@ const AboutUs = () => {
             <div className="about-us-background">
                 <div className="about-us-content">
                     <h1>About Us</h1>
-                    <Landing_about />
+                    <LandingAbout />
                 </div>
 
             </div>

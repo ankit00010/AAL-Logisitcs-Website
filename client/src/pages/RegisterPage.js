@@ -39,7 +39,7 @@ const RegisterPage = () => {
       await axios.post("/users/register", formData);
       message.success("Registeration Successfull");
       setLoading(false);
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       console.log(formData);
 

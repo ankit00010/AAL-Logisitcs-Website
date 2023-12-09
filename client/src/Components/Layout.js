@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import Header from '../Components/Header/Header';
 import Footer from './Footer';
-import '../CSS/index.css'
-
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import '../CSS/index.css';
 
 const Layout = () => {
+  const location = useLocation();
+
+  // Scroll to the top when the child route changes
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, []);
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="page-wrapper">

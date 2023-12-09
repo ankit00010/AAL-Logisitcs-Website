@@ -1,6 +1,6 @@
 import React from 'react';
 import '../CSS/Commonback.css';
-import Service_landing from '../Components/Service_landing/Service_landing';
+import ServiceLanding from '../Components/Service_landing/ServiceLanding';
 const Services = () => {
     return (
         <div className="about-us-container">
@@ -8,7 +8,7 @@ const Services = () => {
             <div className="about-us-background">
                 <div className="about-us-content">
                     <h1>Our Services</h1>
-                    <Service_landing />
+                    <ServiceLanding />
 
                 </div>
             </div>

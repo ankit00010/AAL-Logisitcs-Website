@@ -73,7 +73,7 @@ const Header = () => {
             <Nav className="mx-auto custom-nav">
               {
                 menuPath.map((item, index) => (
-                  <Nav.Link as={NavLink} to={item.path} key={index} exact onClick={() => setExpanded(false)}>
+                  <Nav.Link as={NavLink} to={item.path} key={index} exact="true" onClick={() => setExpanded(false)}>
                     {item.name}
                   </Nav.Link>
                 ))

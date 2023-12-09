@@ -1,37 +1,33 @@
 const express = require("express");
-const cors = require("cors");
+const cors = require("cors"); // Import the cors middleware
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/connectDB");
 const cookieParser = require('cookie-parser');
 
-
-
-
-//config dot env file
+// config dot env file
 dotenv.config();
 
-//datbase call
+// database call
 connectDB();
-//rest object
+
+// rest object
 const app = express();
 app.use(express.json());
 
-//middlewares
-app.use(cors());
-
+// middlewares
+app.use(cors()); // Enable CORS
 app.use(cookieParser());
-
 app.use(morgan("dev"));
 
-
-//routes
+// routes
 const userRoutes = require('./routes/userRoutes');
 app.use("/api/v1/users", userRoutes);
-console.log('here server')
+
+console.log('here server');
 const PORT = 8080 || process.env.PORT;
 
-//listening
+// listening
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

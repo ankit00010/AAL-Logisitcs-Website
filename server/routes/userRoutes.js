@@ -1,5 +1,5 @@
 const express = require("express");
-const { loginController, registerController } = require("../controllers/userController");
+const { loginController, registerController, bookingController } = require("../controllers/userController");
 
 //router object
 const router = express.Router();
@@ -11,10 +11,9 @@ router.post('/login', loginController)
 //POST || REGISTER USER
 
 router.post('/register', registerController);
-console.log('here on /regiser')
 
 
-
+router.post('/book-form', bookingController);
 
 
 

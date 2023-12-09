@@ -10,7 +10,6 @@ const userSchema = new mongoose.Schema(
         salutation: {
             type: String,
             enum: ["Mr", "Miss", "Ms"],
-            required: [true, "Salutation is required"],
         },
         fname: {
             type: String,
@@ -46,8 +45,7 @@ const userSchema = new mongoose.Schema(
             required: [true, "Confirm password is required"],
             validate: {
                 validator: function (v) {
-                    // You can add your custom password matching logic here
-                    // For example, you can compare it with the 'password' field
+
                     return v === this.password;
                 },
                 message: "Passwords do not match",
@@ -63,7 +61,7 @@ const userSchema = new mongoose.Schema(
         role: {
             type: String,
             enum: userRoles,
-            default: "visitor", // Set the default role to "visitor"
+            default: "visitor",
         },
     },
     { timestamps: true }
