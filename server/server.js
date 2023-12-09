@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 // Add rate limiter middleware
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 3, // limit each IP to 3 requests per windowMs
+  max: 50, // limit each IP to 3 requests per windowMs
 });
 
 app.use(limiter);
