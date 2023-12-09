@@ -13,6 +13,11 @@ const Background = () => {
     return () => clearTimeout(timer);
   }, [currentState]);
 
+  const handleImageError = () => {
+    // Handle image loading error (e.g., replace with a placeholder)
+    console.error(`Error loading image: ${imageSlide[currentState].url}`);
+  };
+
   const bgImageStyle = {
     backgroundImage: `url(${imageSlide[currentState].url})`,
     backgroundPosition: 'center',
@@ -47,6 +52,14 @@ const Background = () => {
           </div>
         </div>
       </div>
+      <img
+        loading="lazy"
+        srcSet={`${imageSlide[currentState].url} 1200w, ${imageSlide[currentState].url} 800w`}
+        src={imageSlide[currentState].url}
+        alt={imageSlide[currentState].title}
+        style={{ display: 'none' }}
+        onError={handleImageError}
+      />
     </div>
   );
 };

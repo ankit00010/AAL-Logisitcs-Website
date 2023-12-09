@@ -14,7 +14,6 @@ const HomePage = () => {
 
     <>
       <div>
-
         <Background />
         <About />
         <Services />

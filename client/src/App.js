@@ -11,6 +11,7 @@ import Book from './pages/Book';
 import ContactUs from './pages/ContactUs';
 import Layout from './Components/Layout'
 import LoginPage from "./pages/LoginPage";
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const router = createBrowserRouter(
@@ -70,7 +71,6 @@ function App() {
 
     ]);
   return (
-
 
     <RouterProvider router={router} />
 
