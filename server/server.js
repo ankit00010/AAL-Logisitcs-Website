@@ -18,7 +18,7 @@ app.use(express.json());
 // middlewares
 app.use(cors({
   origin: 'https://aalogistic.vercel.app/login',
-  methods: ['POST', 'GET'],
+  methods: ['POST'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
