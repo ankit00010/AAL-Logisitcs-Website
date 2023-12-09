@@ -65,25 +65,42 @@ const loginController = async (req, res) => {
 
 const registerController = async (req, res) => {
     try {
-        console.log('Received registration request:', req.body);
-
         const newUser = new userModel(req.body);
-        await newUser.save({ writeConcern: { w: 'majority', wtimeout: 0 } });
 
+        // Validate the user data
+        await newUser.validate();
+
+        // If validation passes, save the user
+        await newUser.save({ writeConcern: { w: 'majority', wtimeout: 0 } });
 
         res.status(200).json({
             success: true,
             newUser
-        })
-    } catch (error) {
-        console.error('Registration error:', error);
-        res.status(400).json({
-            success: false,
-            error
         });
+    } catch (error) {
+        if (error.name === 'ValidationError') {
+            // Handle validation errors
+            const validationErrors = {};
+            for (const field in error.errors) {
+                validationErrors[field] = error.errors[field].message;
+            }
+            res.status(400).json({
+                success: false,
+                validationErrors,
+                message: 'Validation error. Please check the form for errors.',
+            });
+        } else {
+            // Handle other types of errors
+            res.status(400).json({
+                success: false,
+                error: error.message,
+                message: 'Registration failed. Please try again later.',
+            });
+        }
     }
+};
 
-}
+
 
 const bookingController = async (req, res) => {
     try {

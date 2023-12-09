@@ -180,7 +180,7 @@ const BookingForm = () => {
                 setFieldErrors({});
             }
         } catch (error) {
-            console.error('Error:', error);
+            message.error('An error occurred while submitting the form. Please try again later.');
         }
     };
 

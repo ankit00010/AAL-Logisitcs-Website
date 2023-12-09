@@ -36,17 +36,33 @@ const RegisterPage = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      await axios.post("/users/register", formData);
-      message.success("Registeration Successfull");
-      setLoading(false);
-      navigate("/login");
-    } catch (error) {
-      console.log(formData);
+      const response = await axios.post("/users/register", formData);
 
+      if (response.status === 200) {
+        message.success("Registration Successful");
+        setLoading(false);
+        navigate("/login");
+      }
+    } catch (error) {
       setLoading(false);
-      message.error("something went wrong");
+
+      if (error.response && error.response.status === 400) {
+        // Validation error
+        if (error.response.data.validationErrors) {
+          const { validationErrors } = error.response.data;
+          // Display field-specific error messages to the user
+          for (const field in validationErrors) {
+            message.error(`${field}: ${validationErrors[field]}`);
+          }
+        } else {
+          message.error("Registration failed. Please check the form for errors.");
+        }
+      } else {
+        message.error("Registration failed. Please check your network connection.");
+      }
     }
   };
+
 
   const bgImageStyle = {
     backgroundPosition: 'center',

@@ -10,14 +10,19 @@ const userSchema = new mongoose.Schema(
         salutation: {
             type: String,
             enum: ["Mr", "Miss", "Ms"],
+            required: [true, "Salutation is required"],
         },
         fname: {
             type: String,
             required: [true, "First name is required"],
+            minlength: [2, "First name should be at least 2 characters"],
+            maxlength: [50, "First name cannot exceed 50 characters"],
         },
         lname: {
             type: String,
             required: [true, "Last name is required"],
+            minlength: [2, "Last name should be at least 2 characters"],
+            maxlength: [50, "Last name cannot exceed 50 characters"],
         },
         email: {
             type: String,
@@ -35,17 +40,18 @@ const userSchema = new mongoose.Schema(
         },
         contact: {
             type: String,
+            match: [/^\d{10}$/, "Invalid contact number"], // Validate a 10-digit contact number
         },
         password: {
             type: String,
             required: [true, "Password is required"],
+            minlength: [6, "Password should be at least 6 characters"],
         },
         cpassword: {
             type: String,
             required: [true, "Confirm password is required"],
             validate: {
                 validator: function (v) {
-
                     return v === this.password;
                 },
                 message: "Passwords do not match",
@@ -53,6 +59,7 @@ const userSchema = new mongoose.Schema(
         },
         organization: {
             type: String,
+            maxlength: [100, "Organization name cannot exceed 100 characters"],
         },
         country: {
             type: String,
