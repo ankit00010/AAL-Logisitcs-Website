@@ -53,7 +53,7 @@ const Header = () => {
             {/* Contact Number */}
             <div className="mx-3 d-flex align-items-center mb-2  d-none d-md-block flex-grow-1">
               <img src={PhoneIcon} alt="Phone Icon" className="icon" />
-              <div className="ms-2">Contact: +91 9711999362</div>
+              <div className="ms-2">Contact: +91 9819685022</div>
             </div>
           </div>
         </Container>
