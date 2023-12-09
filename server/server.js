@@ -17,8 +17,8 @@ app.use(express.json());
 
 // middlewares
 app.use(cors({
-  origin: 'https://user-management-vznb.vercel.app',
-  methods: ['POST', 'GET', 'PUT', 'DELETE'],
+  origin: 'https://aalogistic.vercel.app/login',
+  methods: ['POST', 'GET'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
