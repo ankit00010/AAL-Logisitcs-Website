@@ -36,7 +36,7 @@ const RegisterPage = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("/users/register", formData);
+      const response = await axios.post("https://all-logisitcs-website-api.vercel.app/api/v1/users/register", formData);
 
       if (response.status === 200) {
         message.success("Registration Successful");

@@ -28,7 +28,7 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const response = await axios.post("/users/login", formData);
+            const response = await axios.post("https://all-logisitcs-website-api.vercel.app/api/v1/users/login", formData);
 
             if (response.data.success) {
                 setLoading(false);
