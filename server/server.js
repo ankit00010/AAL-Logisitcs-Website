@@ -16,7 +16,12 @@ const app = express();
 app.use(express.json());
 
 // middlewares
-app.use(cors()); // Enable CORS
+app.use(cors({
+  origin: 'https://user-management-vznb.vercel.app',
+  methods: ['POST', 'GET', 'PUT', 'DELETE'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(cookieParser());
 app.use(morgan("dev"));
 

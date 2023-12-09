@@ -1,33 +1,26 @@
 /* Ending.css */
 
-/* Center the container horizontally and vertically */
+/* Styles for large screens */
 .container-end {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Set the container's height to 100% of the viewport height */
 }
 
-/* Style the image to cover the entire container and add a shadow */
 .img-container-end {
     position: relative;
     width: 100%;
-    /* Make the image container 100% width */
     overflow: hidden;
-    /* Hide overflow to prevent image from overflowing */
 }
 
 .cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Make the image cover the entire container */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    /* Add a black shadow */
 }
 
-/* Style the image overlay */
 .image-overlay {
     position: absolute;
     top: 0;
@@ -39,33 +32,40 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Add a semi-transparent black overlay */
     color: white;
     padding: 20px;
-    /* Add some padding to the overlay */
     text-align: center;
 }
 
-/* Style the text */
 .text-container-end {
     margin-bottom: 20px;
-    /* Add space between text and button */
     text-align: center;
-    /* Center the text within its container */
 }
 
-.text-container-end h2 {
-    font-size: 24px;
+.text-container-end h1 {
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-.text-container-end p {
-    font-size: 18px;
-}
-
-/* Center the button horizontally */
 .link-container-end {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+    .text-container-end h1 {
+        font-size: 24px;
+    }
+
+    .image-overlay {
+        padding: 10px;
+    }
+
+    /* Adjust the image height for smaller screens */
+    .cover-image {
+        height: 50vh;
+        /* You can adjust the value based on your preference */
+    }
 }

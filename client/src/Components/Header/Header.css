@@ -61,6 +61,19 @@
 
 /* Mobile-friendly styles using media queries */
 @media (max-width: 768px) {
+
+    .top-navbar .d-flex:not(:last-child) {
+        display: none;
+    }
+
+    /* Adjust the width or styling for the login link */
+    .custom-navbar .nav-link {
+        width: auto;
+        /* Adjust the width as needed */
+    }
+
+
+
     .custom-navbar .navbar-toggler-icon {
         color: #fff;
         /* Set color for the mobile menu icon */

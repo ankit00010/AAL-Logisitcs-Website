@@ -1,17 +1,13 @@
 import '../CSS/Background.css';
-import imageSlide from '../DataSlides/Dataslide';
 import React, { useEffect, useState } from 'react';
+import imageSlide from '../DataSlides/Dataslide';
 
 const Background = () => {
   const [currentState, setCurrentState] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState === 3) {
-        setCurrentState(0);
-      } else {
-        setCurrentState(currentState + 1);
-      }
+      setCurrentState((prevState) => (prevState + 1) % imageSlide.length);
     }, 5000);
 
     return () => clearTimeout(timer);
