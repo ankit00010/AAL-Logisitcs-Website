@@ -35,13 +35,13 @@ const Header = () => {
             {/* Location */}
             <div className="mx-3 d-flex align-items-center mb-2 mb-md-0 d-none d-md-block flex-grow-1">
               <img src={LocationIcon} alt="Location Icon" className="icon" />
-              <div className="ms-2">Location: Ambernath</div>
+              <div className="ms-2">Location: xyz</div>
             </div>
 
             {/* Email */}
             <div className="mx-3 d-flex align-items-center mb-2 mb-md-0  d-md-block flex-grow-1">
               <img src={MailIcon} alt="Mail Icon" className="icon" />
-              <div className="ms-1">aryanankitlogisticsllp9480@gmail.com</div>
+              <div className="ms-1">aal@gmail.com</div>
             </div>
 
             {/* Operating Hours */}
@@ -53,7 +53,7 @@ const Header = () => {
             {/* Contact Number */}
             <div className="mx-3 d-flex align-items-center mb-2  d-none d-md-block flex-grow-1">
               <img src={PhoneIcon} alt="Phone Icon" className="icon" />
-              <div className="ms-2">Contact: +91 9819685022</div>
+              <div className="ms-2">Contact: +91 91XXXXXXXX</div>
             </div>
           </div>
         </Container>
