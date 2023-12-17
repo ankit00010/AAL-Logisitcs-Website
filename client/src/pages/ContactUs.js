@@ -22,9 +22,9 @@ const ContactUs = () => {
                                     <div className="contact-info">
                                         <h2>Contact Information</h2>
                                         <ul className="list-unstyled">
-                                            <li><FaEnvelope /> Email: aryanankitlogisticsllp9480@gmail.com</li>
-                                            <li><FaPhone /> Phone: +91 9819685022</li>
-                                            <li><FaMapMarker /> Address:  Ambernath</li>
+                                            <li><FaEnvelope /> Email: aal@gmail.com</li>
+                                            <li><FaPhone /> Phone: +91 91XXXXXXXX</li>
+                                            <li><FaMapMarker /> Address:  xyz</li>
                                             <li><FaClock /> Business Hours: Monday-Saturday: 9:00 AM - 6:00 PM</li>
                                             <li><FaComments /> Response Time: We typically respond to inquiries within 24 hours.</li>
                                         </ul>
