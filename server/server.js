@@ -1,3 +1,4 @@
+User
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
@@ -12,15 +13,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: function (origin, callback) {
-    // Check if the request origin is allowed
-    const allowedOrigins = ['https://aalogistic.vercel.app'];
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: 'https://aalogistic.vercel.app',
   methods: ['POST'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
