@@ -12,7 +12,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://aalogistic.vercel.app',
+  origin: 'https://aalogistic.vercel.app/',
   methods: ['POST'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
